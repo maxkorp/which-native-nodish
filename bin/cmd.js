@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 var fnw = require('../');
 var directory = (process.argv.length > 2 && process.argv[2]) || process.cwd();
 
