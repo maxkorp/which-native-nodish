@@ -1,0 +1,24 @@
+{
+  "name": "forNodeWebkit",
+  "version": "0.0.1",
+  "description": "Find out if your module or directory is contained in a node-webkit project",
+  "main": "index.js",
+  "bin": {
+    "forNodeWebkit": "bin/cmd.js",
+    "fnw": "bin/cmd.js"
+  },
+  "dependencies": {
+    "find-parent-dir": "^0.3.0",
+    "nodegit-promise": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/maxkorp/forNodeWebkit.git"
+  },
+  "author": "Maximiliano Korp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxkorp/forNodeWebkit/issues"
+  },
+  "homepage": "https://github.com/maxkorp/forNodeWebkit"
+}
