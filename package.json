@@ -1,5 +1,5 @@
 {
-  "name": "forNodeWebkit",
+  "name": "for-node-webkit",
   "version": "0.0.1",
   "description": "Find out if your module or directory is contained in a node-webkit project",
   "main": "index.js",
