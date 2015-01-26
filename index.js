@@ -2,7 +2,6 @@
 var Promise = require('nodegit-promise');
 var findParentDir = require('find-parent-dir');
 var path = require('path');
-var nodeWebkit = null;
 
 module.exports = function detectNodeWebkit(directory) {
   if (!directory) {
@@ -14,19 +13,26 @@ module.exports = function detectNodeWebkit(directory) {
   return findRoot(directory)
     .then(function(root) {
       var nwVersion;
+      var asVersion;
       var pkg;
+
       if (root) {
-        var pkg = require(path.join(root, "package.json"));
+        pkg = require(path.join(root, "package.json"));
       }
+
       if (!pkg) {
         root = null;
       }
-      else {
-        nwVersion = (pkg.engines && pkg.engines["node-webkit"]) || null;
+
+      else if (pkg.engines) {
+        nwVersion = pkg.engines["node-webkit"] || pkg.engines["nw.js"] || null;
+        asVersion = pkg.engines["atom-shell"] || null;
       }
+
       var output = {
         root: (root ? root : null),
-        nwVersion: ((root && nwVersion) ? nwVersion : null)
+        nwVersion: ((root && nwVersion) ? nwVersion : null),
+        asVersion: ((root && asVersion) ? asversion : null)
       };
 
       return Promise.resolve(output);

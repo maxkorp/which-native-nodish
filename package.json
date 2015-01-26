@@ -1,11 +1,10 @@
 {
-  "name": "for-node-webkit",
-  "version": "0.0.1",
+  "name": "which-native-nodish",
+  "version": "1.0.0",
   "description": "Find out if your module or directory is contained in a node-webkit project",
   "main": "index.js",
   "bin": {
-    "forNodeWebkit": "bin/cmd.js",
-    "fnw": "bin/cmd.js"
+    "which-native-nodish": "bin/cmd.js"
   },
   "dependencies": {
     "find-parent-dir": "^0.3.0",
@@ -13,12 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/maxkorp/forNodeWebkit.git"
+    "url": "http://github.com/maxkorp/which-native-nodish.git"
   },
   "author": "Maximiliano Korp",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxkorp/forNodeWebkit/issues"
-  },
-  "homepage": "https://github.com/maxkorp/forNodeWebkit"
+    "url": "https://github.com/maxkorp/which-native-nodish/issues"
+  }
 }
