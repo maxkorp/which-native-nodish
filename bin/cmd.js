@@ -14,7 +14,7 @@ fnw(directory)
       }
       else if (results.asVersion) {
         console.log("root package at '" + results.root + "' uses atom-shell v"
-        + results.nwVersion);
+        + results.asVersion);
       }
       else {
         console.log("root package at '" + results.root
