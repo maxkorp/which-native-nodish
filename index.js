@@ -32,7 +32,7 @@ module.exports = function detectNodeWebkit(directory) {
       var output = {
         root: (root ? root : null),
         nwVersion: ((root && nwVersion) ? nwVersion : null),
-        asVersion: ((root && asVersion) ? asversion : null)
+        asVersion: ((root && asVersion) ? asVersion : null)
       };
 
       return Promise.resolve(output);
