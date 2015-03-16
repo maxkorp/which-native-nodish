@@ -2,6 +2,7 @@
 var Promise = require('nodegit-promise');
 var findParentDir = require('find-parent-dir');
 var path = require('path');
+var cache = {};
 
 module.exports = function detectNodeWebkit(directory) {
   if (!directory) {
@@ -9,6 +10,10 @@ module.exports = function detectNodeWebkit(directory) {
   }
 
   directory = path.resolve(directory);
+
+  if (cache[directory]) {
+    return Promise.resolve(cache[directory]);
+  }
 
   return findRoot(directory)
     .then(function(root) {
@@ -35,7 +40,8 @@ module.exports = function detectNodeWebkit(directory) {
         asVersion: ((root && asVersion) ? asVersion : null)
       };
 
-      return Promise.resolve(output);
+      cache[directory] = output;
+      return output;
     });
 };
 
