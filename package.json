@@ -1,7 +1,7 @@
 {
   "name": "which-native-nodish",
-  "version": "1.1.0",
-  "description": "Find out if your module or directory is contained in a node-webkit project",
+  "version": "1.1.1",
+  "description": "Find out if your module or directory is contained in a node-webkit or atom-shell project",
   "main": "index.js",
   "bin": {
     "which-native-nodish": "bin/cmd.js"
