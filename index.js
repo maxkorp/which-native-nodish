@@ -31,7 +31,7 @@ module.exports = function detectNodeWebkit(directory) {
 
       else if (pkg.engines) {
         nwVersion = pkg.engines["node-webkit"] || pkg.engines["nw.js"] || null;
-        asVersion = pkg.engines["electron"] | pkg.engines["atom-shell"] || null;
+        asVersion = pkg.engines["electron"] || pkg.engines["atom-shell"] || null;
       }
 
       var output = {
